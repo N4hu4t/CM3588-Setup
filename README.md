@@ -6,6 +6,7 @@ Setup Jellyfin, qbittorrent-nox, as well their needed libraries and users permis
 * Faste setup of qbittorrent-nox and qbtuser with the security safe practices.
 * Can run 3 Streams 4k-80fps.
 
+## Mainland China Read below:
 ## Beginners (Linux)
 You can download nmap to scan all your network and find what ip is your CM3588 installed. `nmap --min-rate 5000 192.168.1.1-254` No need for `--min-rate 5000` (it just speeds the process).
 This script focuses on ubuntu minimal (jammy/noble) [Check Friendlyelec Wiki](https://wiki.friendlyelec.com/wiki/index.php/CM3588) for installing them. Recommended way is installing through USB. (SD Card works great but becarefull with storage).
@@ -28,4 +29,14 @@ HEVC 10 bit
 Enable hardware encoding
 Enable Tone mapping (BT.2390)
 With this settings you should be ready to watch streams.
-THe script needs more work, I'll be updating when I have time.
+The script needs more work, I'll be updating when I have time.
+## For foreigners or chinese living in China.
+You need a way to download github and other files like the ubuntu img.
+If you don't want to use badao or other stuff a way to proceed is getting a server or allowing someone to connect through ssh and using proxychains:
+```
+ssh root@server_outside_of_china_ip -D <choose a port to open> -fCN
+sudo vim /etc/proxychains.conf
+# remove the socks4 and add socks 5 with the port you choose to open in the server.
+proxychains install.sh or run install-CN.sh
+```
+Gl
