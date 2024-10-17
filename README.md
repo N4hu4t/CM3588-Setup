@@ -20,19 +20,20 @@ This option is found in `Tools -> Options... -> Web UI.
 ## Make jellyfin run 3 streams 4k-80fps
 * Install the .deb package in Setup. 
 If you want to know more read the [VPU jellyfin blog](https://jellyfin.org/docs/general/administration/hardware-acceleration/rockchip/)
-In transcodding enable:
-Rockchip MPP (RKMPP)
-H264
-HEVC
-AV1
-HEVC 10 bit
-Enable hardware encoding
-Enable Tone mapping (BT.2390)
+* In transcodding enable:
+** Rockchip MPP (RKMPP)
+** H264
+** HEVC
+** AV1
+** HEVC 10 bit
+** Enable hardware encoding
+** Enable Tone mapping (BT.2390)
 With this settings you should be ready to watch streams.
 The script needs more work, I'll be updating when I have time.
 ## For foreigners or chinese living in China.
 You need a way to download github and other files like the ubuntu img.
 If you don't want to use badao or other stuff a way to proceed is getting a server or allowing someone to connect through ssh and using proxychains:
+* As well you can use [Algo-VPN](https://github.com/trailofbits/algo) or a [Fast-Algo-Setup-VPN](https://github.com/N4hu4t/Algo-VPN) (uses wireguard):
 ```
 ssh root@server_outside_of_china_ip -D <choose a port to open> -fCN
 sudo vim /etc/proxychains.conf
